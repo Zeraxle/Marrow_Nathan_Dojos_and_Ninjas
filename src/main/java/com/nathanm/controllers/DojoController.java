@@ -37,7 +37,7 @@ public class DojoController {
 	@PostMapping("/dojos/create")
 	public String createDojo(@Valid @ModelAttribute("dojo") Dojo dojo, BindingResult result) {
 		if (result.hasErrors()) {
-			return "/dojo/new";
+			return "/dojos/new";
 		}
 		else {
 			service.create(dojo);
